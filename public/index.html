@@ -1,0 +1,504 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Book reliable local, airport, outstation and all-India cab rides with NorthRide Cabs in Chandigarh.">
+
+  <title>NorthRide Cabs | Chandigarh & All India</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css?v=3">
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="NorthRide Cabs home">
+      <span class="brand-mark">
+        <span>N</span>
+        <i>MT</i>
+      </span>
+
+      <span class="brand-text">
+        NorthRide <b>Cabs</b>
+        <small>CHANDIGARH &middot; NORTH INDIA</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#fleet">Our fleet</a>
+      <a href="#booking">Book a ride</a>
+      <a href="#customer-ratings">Reviews</a>
+    </nav>
+
+    <a class="call-pill" href="tel:+919872347745">
+      <span>&rarr;</span> Call Now
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+      â˜°
+    </button>
+  </header>
+
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="live-dot"></span>
+          YOUR JOURNEY, OUR PRIORITY
+        </div>
+
+        <h1>
+          Go further.<br>
+          <em>Ride better.</em>
+        </h1>
+
+        <p>
+          Thoughtful rides, trusted drivers, and comfortable journeys
+          from Chandigarh to wherever life takes you.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-lime" href="#booking">
+            Book your ride <span>&rarr;</span>
+          </a>
+
+          <a class="text-link" href="tel:+919988758566">
+            Call +91 99887 58566 <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="proof-icon">&#10022;</div>
+
+          <div>
+            <b>Local expertise. All-India reach.</b>
+            <small>Chandigarh &middot; Punjab &middot; Haryana &middot; Delhi &middot; Airports</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-note">
+        <span>01 / 04</span>
+        <div></div>
+        <span>BUILT AROUND YOUR JOURNEY</span>
+      </div>
+    </section>
+
+    <!-- ONE-WAY FARES -->
+    <section class="oneway-fares" id="oneway-fares">
+      <div class="section-top">
+        <div>
+          <span class="section-kicker">SIMPLE, TRANSPARENT PRICING</span>
+          <h2>Popular one-way <em>routes.</em></h2>
+        </div>
+
+        <p>
+          Starting fares for comfortable one-way journeys from Chandigarh.
+          Contact us to confirm your final trip fare.
+        </p>
+      </div>
+
+      <div id="onewayFareList" class="oneway-fare-grid">
+        <p class="fare-loading">Loading route fares...</p>
+      </div>
+
+      <div class="fare-footer">
+        <span>
+          Fare may vary by car category, date, and trip requirements.
+        </span>
+
+        <a class="btn btn-dark" href="#booking">
+          Book your journey
+        </a>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="booking-wrap" id="booking">
+      <div class="booking-heading">
+        <div>
+          <span class="section-kicker">LET'S GET YOU THERE</span>
+          <h2>Where to next?</h2>
+        </div>
+
+        <span class="secure-note">
+          â—ˆ Easy booking &middot; 4-wheelers only
+        </span>
+      </div>
+
+      <form id="bookingForm" class="booking-form">
+        <div class="field trip-field">
+          <label for="tripType">TRIP TYPE</label>
+
+          <select id="tripType" name="tripType" required>
+            <option>One-way</option>
+            <option>Round-trip</option>
+            <option>Airport</option>
+            <option>Outstation/All India</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="carCategory">CAR CATEGORY</label>
+
+          <select id="carCategory" name="carCategory" required>
+            <option>Sedan</option>
+            <option>SUV</option>
+            <option>MUV</option>
+            <option>Premium</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="pickup">PICKUP LOCATION</label>
+
+          <input
+            id="pickup"
+            name="pickup"
+            placeholder="City, airport or address"
+            value="Chandigarh"
+            required
+            maxlength="180"
+          >
+
+          <span class="field-hint">&#10022; Chandigarh service hub</span>
+        </div>
+
+        <div class="field">
+          <label for="dropoff">DROP LOCATION</label>
+
+          <input
+            id="dropoff"
+            name="dropoff"
+            placeholder="Where are you going?"
+            required
+            maxlength="180"
+          >
+        </div>
+
+        <div class="field">
+          <label for="pickupDate">PICKUP DATE</label>
+
+          <input
+            id="pickupDate"
+            name="pickupDate"
+            type="date"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="pickupTime">PICKUP TIME</label>
+
+          <input
+            id="pickupTime"
+            name="pickupTime"
+            type="time"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="name">YOUR FULL NAME</label>
+
+          <input
+            id="name"
+            name="name"
+            autocomplete="name"
+            placeholder="Enter your name"
+            required
+            maxlength="100"
+          >
+        </div>
+
+        <div class="field">
+          <label for="phone">MOBILE NUMBER</label>
+
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            placeholder="+91 98765 43210"
+            required
+            maxlength="25"
+          >
+        </div>
+
+        <div class="field">
+          <label for="paymentMethod">PAYMENT PREFERENCE</label>
+
+          <select id="paymentMethod" name="paymentMethod" required>
+            <option value="">Choose payment method</option>
+          </select>
+
+          <small id="paymentHint" class="field-hint"></small>
+        </div>
+
+        <div class="field notes-field">
+          <label for="notes">
+            EXTRA DETAILS <span>(OPTIONAL)</span>
+          </label>
+
+          <textarea
+            id="notes"
+            name="notes"
+            rows="2"
+            placeholder="Passengers, luggage, return date or anything we should know"
+            maxlength="1200"
+          ></textarea>
+        </div>
+
+        <div class="form-bottom">
+          <p>
+            By booking, you agree that our team may contact you about your ride.
+          </p>
+
+          <button class="btn btn-dark" type="submit" id="submitBooking">
+            Request a ride <span>&rarr;</span>
+          </button>
+        </div>
+
+        <div
+          id="bookingMessage"
+          class="message"
+          role="status"
+          aria-live="polite"
+        ></div>
+      </form>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="service-strip" id="services">
+      <div class="strip-intro">
+        <span class="section-kicker">WHERE WE TAKE YOU</span>
+        <h2>
+          From nearby to<br>
+          <em>far beyond.</em>
+        </h2>
+      </div>
+
+      <article class="service-card">
+        <span class="service-no">01</span>
+        <div class="service-icon">âŒ‚</div>
+        <h3>Local & City Rides</h3>
+        <p>
+          Everyday travel around Chandigarh and the Tricity, made easy.
+        </p>
+        <span class="service-arrow">&rarr;</span>
+      </article>
+
+      <article class="service-card">
+        <span class="service-no">02</span>
+        <div class="service-icon">âœˆ</div>
+        <h3>Airport Transfers</h3>
+        <p>
+          Reliable pickup and drop-offs for smooth departures and arrivals.
+        </p>
+        <span class="service-arrow">&rarr;</span>
+      </article>
+
+      <article class="service-card">
+        <span class="service-no">03</span>
+        <div class="service-icon">âŒ</div>
+        <h3>Outstation Tours</h3>
+        <p>
+          Punjab, Haryana, Delhi and comfortable all-India journeys.
+        </p>
+        <span class="service-arrow">&rarr;</span>
+      </article>
+    </section>
+
+    <!-- FLEET -->
+    <section class="fleet-section" id="fleet">
+      <div class="section-top">
+        <div>
+          <span class="section-kicker">YOUR RIDE, YOUR WAY</span>
+          <h2>Meet the <em>fleet.</em></h2>
+        </div>
+
+        <p>
+          Comfortable 4-wheelers for solo travellers, families, and bigger plans.
+        </p>
+      </div>
+
+      <div id="carGallery" class="car-gallery">
+        <div class="loading-card">Loading available cars...</div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER RATINGS -->
+    <section class="customer-ratings" id="customer-ratings">
+      <div class="section-top">
+        <div>
+          <span class="section-kicker">YOUR EXPERIENCE MATTERS</span>
+          <h2>Ride. Rate. <em>Share.</em></h2>
+        </div>
+
+        <p>
+          Have travelled with NorthRide Cabs?
+          Share your experience and help us improve.
+        </p>
+      </div>
+
+      <div class="rating-summary">
+        <div class="rating-average">
+          <strong id="ratingAverage">&mdash;</strong>
+          <div id="ratingSummaryStars" aria-label="Average rating">
+            &#9734;&#9734;&#9734;&#9734;&#9734;
+          </div>
+          <span id="ratingTotal">No ratings yet</span>
+        </div>
+
+        <div class="rating-form-wrap">
+          <h3>Share your experience</h3>
+
+          <form id="ratingForm">
+            <label class="rating-label" for="ratingStarPicker">
+              YOUR RATING
+            </label>
+
+            <div
+              id="ratingStarPicker"
+              class="rating-star-picker"
+              role="group"
+              aria-label="Choose a rating from 1 to 5 stars"
+            >
+              <button type="button" class="rating-star" data-star="1" aria-label="1 star">&#9734;</button>
+              <button type="button" class="rating-star" data-star="2" aria-label="2 stars">&#9734;</button>
+              <button type="button" class="rating-star" data-star="3" aria-label="3 stars">&#9734;</button>
+              <button type="button" class="rating-star" data-star="4" aria-label="4 stars">&#9734;</button>
+              <button type="button" class="rating-star" data-star="5" aria-label="5 stars">&#9734;</button>
+            </div>
+
+            <span id="ratingSelection">Select your rating</span>
+
+            <label class="rating-label" for="ratingComment">
+              YOUR REVIEW <span>(OPTIONAL)</span>
+            </label>
+
+            <textarea
+              id="ratingComment"
+              name="comment"
+              rows="3"
+              maxlength="500"
+              placeholder="Tell us about your ride..."
+            ></textarea>
+
+            <button
+              class="btn btn-dark"
+              type="submit"
+              id="ratingSubmit"
+              disabled
+            >
+              Submit rating
+            </button>
+
+            <div
+              id="ratingMessage"
+              class="message"
+              role="status"
+              aria-live="polite"
+            ></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="bottom-cta">
+      <div>
+        <span class="section-kicker">READY WHEN YOU ARE</span>
+        <h2>
+          Good journeys<br>
+          start <em>right here.</em>
+        </h2>
+      </div>
+
+      <div class="cta-right">
+        <p>
+          Tell us where you're headed. We'll help take care of the rest.
+        </p>
+
+        <a class="btn btn-lime" href="#booking">
+          Plan your ride <span>&rarr;</span>
+        </a>
+      </div>
+
+      <div class="cta-decoration">NR<span>MT</span></div>
+    </section>
+  </main>
+
+    <!-- NORTHRIDE FOUNDERS -->
+  <section class="founders-section" id="founders">
+    <div class="founders-inner">
+      <p class="founders-eyebrow">THE PEOPLE BEHIND NORTHRIDE</p>
+
+      <h2>Meet the <span>Founders</span></h2>
+
+      <p class="founders-intro">
+        Built on trust. Driven by a shared vision for better journeys.
+      </p>
+
+      <div class="founders-grid">
+        <article class="founder-card">
+          <div class="founder-initial">U</div>
+          <p class="founder-role">CO-FOUNDER</p>
+          <h3>Uday Panday</h3>
+          <span class="founder-line"></span>
+        </article>
+
+        <article class="founder-card">
+          <div class="founder-initial">M</div>
+          <p class="founder-role">CO-FOUNDER</p>
+          <h3>Manglam Tiwary</h3>
+          <span class="founder-line"></span>
+        </article>
+      </div>
+
+      <p class="founders-signoff">
+        Together, building reliable journeys and exceptional travel experiences.
+      </p>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-mark">
+        <span>N</span>
+        <i>MT</i>
+      </span>
+
+      <span class="brand-text">
+        NorthRide <b>Cabs</b>
+        <small>CHANDIGARH &middot; NORTH INDIA</small>
+      </span>
+    </a>
+
+    <p>Comfort in every kilometre.</p>
+
+    <div class="footer-phones">
+      <a href="tel:+919872347745">+91 98723 47745</a>
+      <a href="tel:+919988758566">+91 99887 58566</a>
+    </div>
+
+    <span class="copyright">
+      &copy; <span id="year"></span> NorthRide Cabs
+    </span>
+
+    <a class="admin-link" href="/admin.html">Admin login</a>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
+
