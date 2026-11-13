@@ -9,7 +9,7 @@
     "dev": "node --watch server.js"
   },
   "engines": {
-    "node": "22.x"
+    "node": ">=20"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,5 +22,9 @@
     "helmet": "^8.0.0",
     "multer": "^2.5.0",
     "twilio": "^5.4.0"
+  },
+  "overrides": {
+    "@tootallnate/once": "^2.0.1",
+    "tar": "^7.5.21"
   }
 }
